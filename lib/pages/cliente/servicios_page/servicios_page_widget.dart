@@ -114,7 +114,7 @@ class _ServiciosPageWidgetState extends State<ServiciosPageWidget> {
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
                       child: Icon(
                         Icons.account_circle,
-                        color: Color(0xFF24A9E6),
+                        color: Color(0xFF090909),
                         size: 30.0,
                       ),
                     ),
