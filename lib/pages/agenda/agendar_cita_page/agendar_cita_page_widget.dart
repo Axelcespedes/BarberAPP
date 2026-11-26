@@ -1168,6 +1168,15 @@ class _AgendarCitaPageWidgetState extends State<AgendarCitaPageWidget> {
                 padding: EdgeInsetsDirectional.fromSTEB(24.0, 8.0, 24.0, 20.0),
                 child: FFButtonWidget(
                   onPressed: () async {
+                    await CitasTable().insert({
+                      'id': 0,
+                      'cliente_id': currentUserUid,
+                      'barbero_id': '',
+                      'servicio_id': 0,
+                      'fecha': supaSerialize<DateTime>(),
+                      'hora': '',
+                      'notas': '',
+                    });
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
                         content: Text(
@@ -1180,16 +1189,6 @@ class _AgendarCitaPageWidgetState extends State<AgendarCitaPageWidget> {
                         backgroundColor: FlutterFlowTheme.of(context).secondary,
                       ),
                     );
-                    await CitasTable().insert({
-                      'id': 0,
-                      'cliente_id': currentUserUid,
-                      'barbero_id': '',
-                      'servicio_id': 0,
-                      'fecha': supaSerialize<DateTime>(
-                          DateTime.fromMicrosecondsSinceEpoch(0)),
-                      'hora': '',
-                      'notas': '',
-                    });
                   },
                   text: 'Confirmar cita',
                   icon: Icon(
