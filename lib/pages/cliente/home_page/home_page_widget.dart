@@ -374,10 +374,21 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           (FFMainAxisAlignment.end)
                                               .flutterValue,
                                       children: [
-                                        Icon(
-                                          Icons.arrow_forward_sharp,
-                                          color: Color(0xFF24A9E6),
-                                          size: 20.0,
+                                        InkWell(
+                                          splashColor: Colors.transparent,
+                                          focusColor: Colors.transparent,
+                                          hoverColor: Colors.transparent,
+                                          highlightColor: Colors.transparent,
+                                          onTap: () async {
+                                            context.pushNamed(
+                                                AgendarCitaPageWidget
+                                                    .routeName);
+                                          },
+                                          child: Icon(
+                                            Icons.arrow_forward_sharp,
+                                            color: Color(0xFF24A9E6),
+                                            size: 20.0,
+                                          ),
                                         ),
                                       ],
                                     ),
