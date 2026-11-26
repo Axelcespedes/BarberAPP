@@ -121,6 +121,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: ServiciosPageWidget.routeName,
           path: ServiciosPageWidget.routePath,
           builder: (context, params) => ServiciosPageWidget(),
+        ),
+        FFRoute(
+          name: AgendarCitaPageWidget.routeName,
+          path: AgendarCitaPageWidget.routePath,
+          builder: (context, params) => AgendarCitaPageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

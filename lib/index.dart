@@ -12,3 +12,5 @@ export '/pages/administrador/admin_servicios_page/admin_servicios_page_widget.da
     show AdminServiciosPageWidget;
 export '/pages/cliente/servicios_page/servicios_page_widget.dart'
     show ServiciosPageWidget;
+export '/pages/agenda/agendar_cita_page/agendar_cita_page_widget.dart'
+    show AgendarCitaPageWidget;
